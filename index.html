@@ -5,62 +5,77 @@
 		<title>FORM PENDAFTARAN</title>
 		<meta name="author" content="Yerri Kurnia Febrina">
 		<style>
-			
 			body{
-				background-color: rgb(71, 104, 104);
+				/* background-color: lightblue; */
+				/* background-image: url("bg.jpg");  */
+				background-image: url("../bg.jpg");
+
+				background-size: cover;
 			}
-			h2{
-				color:#ffffff;
+			h1{
+				color:whitesmoke;
 				font-style: italic;
 				text-align: center;
-				font-family: Cursive;
+				font-size: 45px;
 			}
 			
-			select,textarea,input[type="text"],[type="date"],[type="file"],[type="email"]{
-				border-radius: 15px;
-				background-color: rgb(252, 159, 174);
-				color: rgb(245, 42, 103);
+			.text-merah{
+				color:red;
+			}
+			#text-kuning{
+				color:yellow;
+			}
+			textarea,select,input[type="text"],[type="email"],[type="date"],[type="file"]{
+				border-radius: 10px;
+				background-color: lightblue;
+				color: darkblue;
 				padding: 10px;
 				width: 90%;
-				border-color:red;
+				border-color:darkblue;
 			}
-			::placeholder{
-				color:blue;
+			table{
+				background-color: rgb(231, 227, 222);
+				opacity: 0.93;
 			}
 			*{
-				color:white;
-				font-family:Verdana;
+				color:black;
+				font-family: Arial;
 			}
-			#button{
-				border-radius: 15px;
-				padding: 10px;
-				color: black;
-				font-weight: bold;
+
+			.button{
+				background-color: lightblue;
+				padding: 15px;
+				font-weight:normal;
+				border-radius: 5px;
+				border-color: darkblue;
 			}
-			#button:hover{
-				background-color: blue;
-				font-weight: bold;
-				padding: 10px;
+			.button:hover{
+				background-color: darkblue;
+				padding: 15px;
+				font-weight:bold;
+				border-radius: 5px;
 				color: white;
+				border-color: lightblue;
 			}
+			
 		</style>
 	</head>
-	
+
 	<body >
 	
-	<h2>Form Pendaftaran</h2>
-	<!-- <h2 class="h2">Data Mahasiswa</h2> -->
-	<!-- <h2 class="h2">Data Mahasiswa</h2> -->
-	<!-- <h2 class="h2">Data ORTU</h2> -->
+	<h1>Form Pendaftaran</h1>
+	<!-- <h1 class="text-merah">Data Mahasiswa</h1> -->
+	<!-- <h1 id="text-kuning">Data Mahasiswa</h1> -->
+
 	<form action="" method="GET">
 	<table width="100%" >
 		<tr>
 		<td width="50%" valign="top">
 			<fieldset>
-				<legend id="h2">Data Pribadi</legend>
-				<table border="0"  width="100%">
+				<legend>Data Pribadi</legend>
+				<table width="100%" >
 					<tr>
-						<td width="30%"><label>Nama Lengkap</label></td>
+						<td><label>Nama Lengkap</label></td>
 						<td>:</td>
 						<td><input type="text" name="nama" id="id_nama" placeholder="input nama" required autofocus></td>
 					</tr>
@@ -138,7 +153,7 @@
 				<legend>Data Orang Tua</legend>
 					<table width="100%" >
 						<tr>
-							<td width="30%"	><label>Nama Ayah</label></td>
+							<td><label>Nama Ayah</label></td>
 							<td>:</td>
 							<td>
 								<input type="text" name="nama" id="id_nama">
@@ -195,8 +210,8 @@
 						</tr>
 						<tr>
 							<td colspan="3" align="center">
-							<input type="submit" id="button"  value="Simpan">
-							<input type="reset" id="button" value="Reset">
+							<input type="submit" class="button" value="Simpan">
+							<input type="reset" class="button" value="Reset">
 							</td>
 						</tr>
 					</table>
